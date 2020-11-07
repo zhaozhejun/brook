@@ -20,6 +20,6 @@ sudo apt-get install dnsutils
 - 从github拉取
 ```
 For RHEL / CentOS:
-yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh
+yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh && chmod +x brook-pf-mod.sh && bash brook-pf-mod.sh
 ```
 
