@@ -13,7 +13,13 @@ sudo yum install bind-utils -y
 For Debian / Ubuntu
 sudo apt-get install dnsutils
 ```
-不然可能会产生如下报错
+ - 不然可能会产生如下报错
 ```
 ./brook-pf-mod.sh: line 706: dig: command not found
 ```
+- 从github拉取
+```
+For RHEL / CentOS:
+yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh
+```
+
