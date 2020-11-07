@@ -23,3 +23,8 @@ For RHEL / CentOS:
 yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh && chmod +x brook-pf-mod.sh && bash brook-pf-mod.sh
 ```
 
+# 其他错误
+```
+Brook v20200909版本无法正常启用，详细原因请查看Brook日志 [注意！我并未尝试其他服务器是否能复现此错误]
+如遇到该版本无法正常启用，请回退版本至 v20200801
+```
