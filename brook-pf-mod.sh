@@ -7,6 +7,7 @@ export PATH
 #   Description: Brook
 #   Version: 1.0.0
 #   Author: Toyo, yulewang(DDNS features)
+#   Modify：ECIAP
 #   Blog: https://doub.io/wlzy-jc37/
 #=================================================
 
@@ -69,7 +70,8 @@ check_pid(){
 }
 check_new_ver(){
     echo -e "请输入要下载安装的 Brook 版本号 ${Green_font_prefix}[ 格式是日期，例如: v20180909 ]${Font_color_suffix}
-版本列表请去这里获取：${Green_font_prefix}[ https://github.com/txthinking/brook/releases ]${Font_color_suffix}"
+版本列表请去这里获取：${Green_font_prefix}[ https://github.com/txthinking/brook/releases ]${Font_color_suffix}
+如需添加域名中转请安装 yum install bind-utils -y 或 apt-get install dnsutils -y"
     read -e -p "直接回车即自动获取:" brook_new_ver
     if [[ -z ${brook_new_ver} ]]; then
         brook_new_ver=$(wget -qO- https://api.github.com/repos/txthinking/brook/releases| grep "tag_name"| head -n 1| awk -F ":" '{print $2}'| sed 's/\"//g;s/,//g;s/ //g')
