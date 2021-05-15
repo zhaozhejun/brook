@@ -15,8 +15,10 @@ sudo apt-get install dnsutils -y && sudo apt-get install wget -y && wget https:/
 ```
 
 # 其他事项
+
+对于 **v20200801 以及更早的brook版本** 请使用如下命令
 ```
-对于 **v20200801 以及更早的brook版本**请使用如下命令
+
 [修改建议来自 @110560 感谢]
 
 For RHEL / CentOS:
