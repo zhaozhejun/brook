@@ -5,26 +5,24 @@
 # ECIAP 再修改分支
 尝试修复 https://github.com/yulewang/brook/issues/4 此问题的分支
 
-- 在使用此脚本前Linux服务器应先进行以下操作
-```
-For RHEL / CentOS:
-sudo yum install bind-utils -y
-
-For Debian / Ubuntu
-sudo apt-get install dnsutils
-```
- - 不然可能会产生如下报错
-```
-./brook-pf-mod.sh: line 706: dig: command not found
-```
 - 从github拉取
 ```
 For RHEL / CentOS:
-yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh && chmod +x brook-pf-mod.sh && bash brook-pf-mod.sh
+sudo yum install bind-utils -y && yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh && chmod +x brook-pf-mod.sh && bash brook-pf-mod.sh
+
+For Debian / Ubuntu:
+sudo apt-get install dnsutils -y && sudo apt-get install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh && chmod +x brook-pf-mod.sh && bash brook-pf-mod.sh
 ```
 
-# 其他错误
+# 其他事项
 ```
-Brook v20200909版本无法正常启用，详细原因请查看Brook日志 [注意！我并未尝试其他服务器是否能复现此错误]
-如遇到该版本无法正常启用，请回退版本至 v20200801
+对于 **v20200801 以及更早的brook版本**请使用如下命令
+[修改建议来自 @110560 感谢]
+
+For RHEL / CentOS:
+yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod-old.sh && chmod +x brook-pf-mod-old.sh && bash brook-pf-mod-old.sh
+
+For Debian / Ubuntu:
+yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod-old.sh && chmod +x brook-pf-mod-old.sh && bash brook-pf-mod-old.sh
+
 ```
