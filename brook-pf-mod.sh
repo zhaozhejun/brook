@@ -5,9 +5,8 @@ export PATH
 #=================================================
 #   System Required: CentOS/Debian/Ubuntu
 #   Description: Brook
-#   Version: 1.0.0
-#   Author: Toyo, yulewang(DDNS features)
-#   Modify：ECIAP
+#   Version: 1.0.1
+#   Author: Toyo, yulewang(DDNS features), ECIAP(Modify)
 #   Blog: https://doub.io/wlzy-jc37/
 #=================================================
 
@@ -149,14 +148,14 @@ Download_brook(){
 }
 Service_brook(){
     if [[ ${release} = "centos" ]]; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/service/brook-pf_centos -O /etc/init.d/brook-pf; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf_centos -O /etc/init.d/brook-pf; then
             echo -e "${Error} Brook服务 管理脚本下载失败 !" && exit 1
         fi
         chmod +x /etc/init.d/brook-pf
         chkconfig --add brook-pf
         chkconfig brook-pf on
     else
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/service/brook-pf_debian -O /etc/init.d/brook-pf; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf_debian -O /etc/init.d/brook-pf; then
             echo -e "${Error} Brook服务 管理脚本下载失败 !" && exit 1
         fi
         chmod +x /etc/init.d/brook-pf
