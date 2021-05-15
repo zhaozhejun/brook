@@ -6,11 +6,14 @@
 尝试修复 https://github.com/yulewang/brook/issues/4 此问题的分支
 
 - 从github拉取
-```
+
 For RHEL / CentOS:
+```
 sudo yum install bind-utils -y && yum install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh && chmod +x brook-pf-mod.sh && bash brook-pf-mod.sh
+```
 
 For Debian / Ubuntu:
+```
 sudo apt-get install dnsutils -y && sudo apt-get install wget -y && wget https://raw.githubusercontent.com/ECIAP/brook/master/brook-pf-mod.sh && chmod +x brook-pf-mod.sh && bash brook-pf-mod.sh
 ```
 
